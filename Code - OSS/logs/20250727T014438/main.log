@@ -1,0 +1,8 @@
+2025-07-27 01:44:38.470 [info] update#setState disabled
+2025-07-27 01:44:38.471 [info] update#ctor - updates are disabled as there is no update URL
+2025-07-27 01:45:22.626 [error] [UtilityProcessWorker]: terminated unexpectedly with code 15, signal: unknown
+2025-07-27 01:45:22.627 [error] [UtilityProcess id: 1, type: fileWatcher, pid: 134137]: crashed with code 15 and reason 'killed'
+2025-07-27 01:45:22.630 [error] [UtilityProcess type: shared-process, pid: 134132]: crashed with code 15 and reason 'killed'
+2025-07-27 01:45:22.633 [info] Extension host with pid 134127 exited with code: 15, signal: unknown.
+2025-07-27 01:45:22.633 [error] [UtilityProcess id: 1, type: extensionHost, pid: 134127]: crashed with code 15 and reason 'killed'
+2025-07-27 01:45:22.639 [error] CodeWindow: renderer process gone (reason: clean-exit, code: <unknown>)

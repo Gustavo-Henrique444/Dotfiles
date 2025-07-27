@@ -1,0 +1,9 @@
+{
+    "editor.fontSize": 18,
+    "editor.formatOnSave": true,
+    "files.autoSave": "onFocusChange",
+    "explorer.confirmDelete": false,
+    "editor.fontFamily": "JetBrains Mono Nerd Font",
+    "editor.codeLensFontFamily": "JetBrains Mono Nerd Font",
+    "editor.inlayHints.fontFamily": "JetBrains Mono Nerd Font"
+}

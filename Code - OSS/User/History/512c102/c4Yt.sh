@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Path to notification sound
+NOTIFY_SOUND="/usr/share/sounds/freedesktop/stereo/complete.oga"
+
+# Set your browser player name here (check with 'playerctl -l')
+BROWSER_PLAYER="firefox"
+
+echo "Listening for YouTube playback on $BROWSER_PLAYER..."
+
+playerctl --player=$BROWSER_PLAYER metadata --follow --format '{{xesam:url}}' | while read -r url; do
+    if [[ "$url" == *"youtube.com"* ]]; then
+        echo "[+] YouTube playback started: $url"
+        paplay "$NOTIFY_SOUND"
+    fi
+done

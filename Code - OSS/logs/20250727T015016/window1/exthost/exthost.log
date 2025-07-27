@@ -1,0 +1,9 @@
+2025-07-27 01:50:19.803 [info] Extension host with pid 2673 started
+2025-07-27 01:50:19.803 [info] Skipping acquiring lock for /home/luno/.config/Code - OSS/User/workspaceStorage/13951b655bea2772609941eff81d1749.
+2025-07-27 01:50:20.071 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-07-27 01:50:20.134 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-07-27 01:50:20.141 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-07-27 01:50:20.217 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-07-27 01:50:20.351 [info] Eager extensions activated
+2025-07-27 01:50:20.361 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-07-27 01:50:20.364 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'

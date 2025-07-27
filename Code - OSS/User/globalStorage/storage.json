@@ -1,0 +1,75 @@
+{
+    "telemetry.sqmId": "",
+    "telemetry.machineId": "68ba027e699e5d8f4d1dc87dc281ed97b688d503d9ac60dc9e0e49c47f316e66",
+    "telemetry.devDeviceId": "37024ba1-abc0-4642-9ec1-21f518f1aca7",
+    "backupWorkspaces": {
+        "workspaces": [],
+        "folders": [
+            {
+                "folderUri": "file:///home/luno/.config"
+            }
+        ],
+        "emptyWindows": []
+    },
+    "windowControlHeight": 35,
+    "profileAssociations": {
+        "workspaces": {
+            "file:///home/luno/.config": "__default__profile__"
+        },
+        "emptyWindows": {}
+    },
+    "windowsState": {
+        "lastActiveWindow": {
+            "folder": "file:///home/luno/.config",
+            "backupPath": "/home/luno/.config/Code - OSS/Backups/6cc82ada1c323d386774cb59489183eb",
+            "uiState": {
+                "mode": 1,
+                "x": 1846,
+                "y": 6,
+                "width": 708,
+                "height": 531
+            }
+        },
+        "openedWindows": []
+    },
+    "theme": "vs-dark",
+    "themeBackground": "#161925",
+    "windowSplash": {
+        "zoomLevel": 0,
+        "baseTheme": "vs-dark",
+        "colorInfo": {
+            "foreground": "#f8f8f2",
+            "background": "#161925",
+            "editorBackground": "#161925",
+            "titleBarBackground": "#161925",
+            "activityBarBackground": "#232634",
+            "activityBarBorder": "#232634",
+            "sideBarBackground": "#161925",
+            "sideBarBorder": "#11131c",
+            "statusBarBackground": "#11131c",
+            "statusBarNoFolderBackground": "#11131c"
+        },
+        "layoutInfo": {
+            "sideBarSide": "left",
+            "editorPartMinWidth": 220,
+            "titleBarHeight": 35,
+            "activityBarWidth": 48,
+            "sideBarWidth": 0,
+            "auxiliaryBarWidth": 0,
+            "statusBarHeight": 22,
+            "windowBorder": false
+        }
+    },
+    "windowSplashWorkspaceOverride": {
+        "layoutInfo": {
+            "sideBarWidth": 170,
+            "auxiliaryBarWidth": 300,
+            "workspaces": {
+                "13951b655bea2772609941eff81d1749": {
+                    "sideBarVisible": false,
+                    "auxiliaryBarVisible": false
+                }
+            }
+        }
+    }
+}
