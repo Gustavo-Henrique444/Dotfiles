@@ -35,11 +35,11 @@ source() {
   command source
   cp ~/.bashrc /home/luno/Backup/config/bashrc
   clear
-  echo -e "copiado com sucesso 📒"
+  echo -e "copiado com sucesso 📒" | pv -qL 32
 }
 
 function update() {
-	echo -e $"\e[1;32m🕒 Starting Update This May Take A While..." | pv -qL 12
+	echo -e $"\e[1;32m🕒 Starting Update This May Take A While..." | pv -qL 32
 	sudo reflector --country Brazil --latest 19 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 	sudo pacman -Syu --noconfirm
 	yay -Syu --noconfirm
@@ -48,7 +48,7 @@ function update() {
 	yay -Yc --noconfirm
 	rm -rf .cache/* --noconfirm 
 	clear
-	echo -e $"\e[1;32m🔒 Everything is Up to Date, Have a Good Day Luno!!" | pv -qL 12
+	echo -e $"\e[1;32m🔒 Everything is Up to Date, Have a Good Day Luno!!" | pv -qL 32
 }
 
 function static() {
@@ -145,7 +145,7 @@ mensagens=(
 
 	mensagem="${mensagens[$RANDOM % ${#mensagens[@]}]}"
 
- echo -e "\e[1;35m$mensagem\e[0m" | pv -qL 32
+ echo -e "\e[1;35m$mensagem\e[0m"  | pv -qL 32
 
 	}
 
@@ -162,7 +162,7 @@ sorting() {
   local temp_dir="/home/luno/Temp"
 
   if ! cd "$temp_dir" 2>/dev/null; then
-    echo "Pasta Temp não encontrada em $temp_dir"
+    echo "Pasta Temp não encontrada em $temp_dir" | pv -qL 32
     return 1
   fi
 
@@ -219,20 +219,30 @@ sorting() {
   shopt -u nullglob
 
  echo "📂 Arquivos movidos:"
-echo "  🎬 Videos: $count_videos"
-echo "  🎵 Audios: $count_audios"
-echo "  📄 Documents: $count_documents"
-echo "  📦 Archives: $count_archives"
-echo "  🖼️ Images: $count_images"
-echo "  ❓ Others: $count_others"
+echo "  🎬 Videos: $count_videos" | pv -qL 32
+echo "  🎵 Audios: $count_audios" | pv -qL 32
+echo "  📄 Documents: $count_documents" | pv -qL 32
+echo "  📦 Archives: $count_archives" | pv -qL 32
+echo "  🖼️ Images: $count_images" | pv -qL 32
+echo "  ❓ Others: $count_others"  | pv -qL 32
 
   # Return to /home/luno at the end
   cd /home/luno || echo "Falha ao voltar para /home/luno"
 }
 
 
-echo() {
-    # Use printf to handle arguments properly and pipe to pv for animation
-    printf "%s\n" "$*" | pv -qL 32
+ls_emoji() {
+    for f in *; do
+        if [ -d "$f" ]; then
+            echo "📁 $f" | pv -qL 32
+        elif [[ "$f" =~ \.(mp3|wav|flac)$ ]]; then
+            echo "🎵 $f" | pv -qL 32
+        elif [[ "$f" =~ \.(jpg|jpeg|png|gif)$ ]]; then
+            echo "🖼️ $f" | pv -qL 32
+        else
+            echo "📄 $f" | pv -qL 32
+        fi
+    done
 }
+alias ls='ls_emoji'
 
