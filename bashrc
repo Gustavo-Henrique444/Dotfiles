@@ -39,7 +39,7 @@ source() {
 }
 
 function update() {
-	echo -e $"\e[1;32m🕒 Starting Update This May Take A While" | pv -qL 12
+	echo -e $"\e[1;32m🕒 Starting Update This May Take A While..." | pv -qL 12
 	sudo reflector --country Brazil --latest 19 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 	sudo pacman -Syu --noconfirm
 	yay -Syu --noconfirm
@@ -154,5 +154,85 @@ clear() {
 
     fastfetch
     mensagem
+}
+
+
+
+sorting() {
+  local temp_dir="/home/luno/Temp"
+
+  if ! cd "$temp_dir" 2>/dev/null; then
+    echo "Pasta Temp não encontrada em $temp_dir"
+    return 1
+  fi
+
+  # Initialize counters
+  local count_videos=0
+  local count_audios=0
+  local count_documents=0
+  local count_archives=0
+  local count_images=0
+  local count_others=0
+
+  shopt -s nullglob
+  for filepath in *; do
+    if [ -f "$filepath" ]; then
+      local ext="${filepath##*.}"
+      local ext_lower=$(echo "$ext" | tr '[:upper:]' '[:lower:]')
+
+      if [[ "$filepath" == *.tar.gz ]]; then
+        ext_lower="tar.gz"
+      fi
+
+      local target_dir=""
+      case "$ext_lower" in
+        mp4|mkv|avi)
+          target_dir="/home/luno/Videos"
+          ((count_videos++))
+          ;;
+        mp3|wav)
+          target_dir="/home/luno/Audios"
+          ((count_audios++))
+          ;;
+        pdf|docx|txt)
+          target_dir="/home/luno/Documents"
+          ((count_documents++))
+          ;;
+        zip|tar.gz|rar)
+          target_dir="/home/luno/Archives"
+          ((count_archives++))
+          ;;
+        jpg|png|gif|webp)
+          target_dir="/home/luno/Images"
+          ((count_images++))
+          ;;
+        *)
+          target_dir="/home/luno/Others"
+          ((count_others++))
+          ;;
+      esac
+
+      mkdir -p "$target_dir"
+      mv -- "$filepath" "$target_dir/"
+    fi
+  done
+  shopt -u nullglob
+
+ echo "📂 Arquivos movidos:"
+echo "  🎬 Videos: $count_videos"
+echo "  🎵 Audios: $count_audios"
+echo "  📄 Documents: $count_documents"
+echo "  📦 Archives: $count_archives"
+echo "  🖼️ Images: $count_images"
+echo "  ❓ Others: $count_others"
+
+  # Return to /home/luno at the end
+  cd /home/luno || echo "Falha ao voltar para /home/luno"
+}
+
+
+echo() {
+    # Use printf to handle arguments properly and pipe to pv for animation
+    printf "%s\n" "$*" | pv -qL 32
 }
 
