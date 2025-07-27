@@ -20,7 +20,8 @@ This repository contains my personal dotfiles and a set of handy shell functions
   Simplifies and automates the update process for your system and dotfiles. 
 
 - 🚀 **Fast Git Push (`gitpush`)**  
-  Speeds up pushing changes to GitHub with a convenient function. 
+  Speeds up pushing changes to GitHub with a convenient function.
+  `configBackup` 
 
 ## 🛠️ Usage
 
