@@ -19,6 +19,13 @@ function reboot() {
 	sudo systemctl reboot
 }
 
+configBackup(){
+	cd /home/luno/Backup/config/
+ echo -e $"\e[1;32m📁 Wait Pulling ./Config..." | pv -qL 32
+ rsync -avh --progress ~/.config/ /home/luno/Backup/config/
+
+}
+
 gitpush() {
   if [ -z "$1" ]; then
     echo "❌ Você precisa passar uma mensagem de commit."
@@ -35,7 +42,7 @@ source() {
   command source
   cp ~/.bashrc /home/luno/Backup/config/bashrc
   clear
-  echo -e "copiado com sucesso 📒" | pv -qL 32
+  echo -e $"\e[1;32mCopiado com sucesso 📒" | pv -qL 32
 }
 
 function update() {
