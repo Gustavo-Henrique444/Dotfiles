@@ -239,10 +239,17 @@ ls_emoji() {
             echo "🎵 $f" | pv -qL 32
         elif [[ "$f" =~ \.(jpg|jpeg|png|gif)$ ]]; then
             echo "🖼️ $f" | pv -qL 32
-        else
+        elif [[ "$f" =~ \.(mkv|mp4)$  ]]; then
+    echo "🎥 $f" | pv -qL 32
+else
             echo "📄 $f" | pv -qL 32
         fi
     done
 }
 alias ls='ls_emoji'
+
+
+
+
+
 
