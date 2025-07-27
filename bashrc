@@ -19,6 +19,25 @@ function reboot() {
 	sudo systemctl reboot
 }
 
+gitpush() {
+  if [ -z "$1" ]; then
+    echo "❌ Você precisa passar uma mensagem de commit."
+    echo "Uso: gitpush \"mensagem do commit\""
+    return 1
+  fi
+
+  git add .
+  git commit -m "$1"
+  git push
+}
+
+source() {
+  command source
+  cp ~/.bashrc /home/luno/Backup/config/bashrc
+  clear
+  echo -e "copiado com sucesso 📒"
+}
+
 function update() {
 	echo -e $"\e[1;32m🕒 Starting Update This May Take A While" | pv -qL 12
 	sudo reflector --country Brazil --latest 19 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
@@ -128,10 +147,6 @@ mensagens=(
 
  echo -e "\e[1;35m$mensagem\e[0m" | pv -qL 32
 
-
-
-  kill $SOUND_PID 2>/dev/null
-  wait $SOUND_PID 2>/dev/null
 	}
 
 clear() {
