@@ -1,0 +1,12 @@
+2025-07-27 18:17:56.093 [info] Extension host with pid 504022 started
+2025-07-27 18:17:56.093 [info] Skipping acquiring lock for /home/luno/.config/Code - OSS/User/workspaceStorage/13951b655bea2772609941eff81d1749.
+2025-07-27 18:17:56.578 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-07-27 18:17:56.716 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-07-27 18:17:56.870 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-07-27 18:17:56.982 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-07-27 18:17:57.246 [info] Eager extensions activated
+2025-07-27 18:17:57.259 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-07-27 18:17:57.262 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-07-27 18:18:08.676 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-07-27 18:18:08.693 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-07-27 18:18:08.792 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
