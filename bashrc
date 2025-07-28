@@ -210,23 +210,23 @@ sorting() {
 
       local target_dir=""
       case "$ext_lower" in
-        mp4|mkv|avi)
+        mkv|mp4|avi|mov|wmv|flv|webm|mpeg|mpg|3gp|m4v|ts|ogv|divx|vob|rm|rmvb|asf|f4v|mxf)
           target_dir="/home/luno/Videos"
           ((count_videos++))
           ;;
-        mp3|wav)
+        mp3|wav|flac|aac|ogg|wma|alac|aiff|m4a|opus|pcm|amr|tta|wv|ape|mid|midi)
           target_dir="/home/luno/Audios"
           ((count_audios++))
           ;;
-        pdf|docx|txt)
+        pdf|docx|doc|txt|rtf|odt|xls|xlsx|ppt|pptx|csv|md|tex|html|xml|json|epub|mobi)
           target_dir="/home/luno/Documents"
           ((count_documents++))
           ;;
-        zip|tar.gz|rar)
+        zip|tar.gz|rar|7z|tar|gz|bz2|xz|lzma|iso|cab|arj|z|lz|tgz|tbz2)
           target_dir="/home/luno/Archives"
           ((count_archives++))
           ;;
-        jpg|png|gif|jpeg|webp)
+        jpg|jpeg|png|gif|bmp|tiff|svg|webp|heic|ico|raw|psd|indd|ai)
           target_dir="/home/luno/Images"
           ((count_images++))
           ;;
