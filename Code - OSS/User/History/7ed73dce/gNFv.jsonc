@@ -37,10 +37,10 @@
             "key": "│ {#35} kernel  {#keys}│",
             "type": "kernel"
         },
-        //{
-        //   "key": "│ {#32}󰇅 disk   {#keys}│",
-        //   "type": "disk"
-        //},
+        {
+            "key": "│ {#32}󰇅 disk   {#keys}│",
+            "type": "disk"
+        },
         {
             "key": "│ {#36}󰇄 desktop {#keys}│",
             "type": "de"
