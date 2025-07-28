@@ -209,7 +209,7 @@ sorting() {
           target_dir="/home/luno/Archives"
           ((count_archives++))
           ;;
-        jpg|png|gif|webp)
+        jpg|png|gif|jpeg|webp)
           target_dir="/home/luno/Images"
           ((count_images++))
           ;;
