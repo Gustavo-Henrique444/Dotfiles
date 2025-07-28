@@ -28,6 +28,11 @@ This repository contains my personal dotfiles and a set of handy shell functions
 - 📦 **Weekly Backup on HDD**  
   Performs a weekly backup of files to the HDD for longer-term storage and redundancy.
 
+- 🛠️ Automate SSD (daily) and HDD (weekly) backups using crontab 💾📆
+    Set up daily backup to SSD at 22:00 via crontab.
+    Scheduled weekly backup to HDD every Sunday at 22:00.
+    Ensures consistent and automatic file backups without manual effort.
+
 ## 🛠️ Usage
 
 Each function or script can be sourced or called directly from your terminal. Make sure to source your `.bashrc` or equivalent shell config to have access to these functions.
