@@ -276,4 +276,15 @@ alias ls='ls_emoji'
 
 
 
+1dayBackup() {
+	echo -e "\e[1;32m"
+    rsync -avh --delete /home/luno/ /mnt/hdd/HomeBackup-1-day
+    echo -e "\e[1;32m💾 Backup De 1 Dia Finalizado Com Sucesso!"
+}
+
+7dayBackup() {
+	echo -e "\e[1;32m"
+    rsync -avh --delete /home/luno/ /mnt/ssd/HomeBackup-7-day
+    echo -e "\e[1;32m💾 Backup De 7 Dias Finalizado Com Sucesso!"
+}
 
