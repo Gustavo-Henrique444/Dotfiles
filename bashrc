@@ -38,19 +38,19 @@ gitpush() {
 
 	
 
-echo "🚀 Pushing to remote..." | pv -qL 32
+echo -e $"\e[1;32m🚀 Pushing to remote..." | pv -qL 32
 
   if git push; then
-	  echo "✅ Push successful!" | pv -qL 32
+	  echo -e $"\e[1;32m✅ Push successful!" | pv -qL 32
     else
-        echo "⚠️ Push failed – attempting to rebase and try again..." | pv -qL 32
+        echo -e $"\e[1;32m Push failed – attempting to rebase and try again..." | pv -qL 32
         git pull --rebase
 
-        echo "🔁 Retrying push..." | pv -qL 32
+        echo -e $"\e[1;32m🔁 Retrying push..." | pv -qL 32
         if git push; then
-            echo "✅ Push successful after rebase!" | pv -qL 32
+            echo -e $"\e[1;32m✅ Push successful after rebase!" | pv -qL 32
         else
-            echo "❌ Push failed again. Please check manually." | pv -qL 32
+            echo -e $"\e[1;32m❌ Push failed again. Please check manually." | pv -qL 32
         fi
     fi
 }
