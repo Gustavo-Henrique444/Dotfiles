@@ -21,7 +21,12 @@ This repository contains my personal dotfiles and a set of handy shell functions
 
 - 🚀 **Fast Git Push (`gitpush`)**  
   Speeds up pushing changes to GitHub with a convenient function.
-  `configBackup :)`  
+
+- 💾 **Daily Backup on SSD**  
+  Automatically performs a daily backup of important files to the SSD, ensuring fast and reliable storage for recent data.
+
+- 📦 **Weekly Backup on HDD**  
+  Performs a weekly backup of files to the HDD for longer-term storage and redundancy.
 
 ## 🛠️ Usage
 
